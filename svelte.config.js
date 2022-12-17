@@ -9,7 +9,10 @@ const config = {
         postcss: true
     }),
     kit: {
-        adapter: adapter(),
+        adapter: adapter({
+            edge: false,
+            split: true
+        }),
         csrf: {
             checkOrigin: false
         }
