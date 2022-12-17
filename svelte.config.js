@@ -1,5 +1,6 @@
 //import adapter from '@sveltejs/adapter-node'
 import serverless from "@yarbsemaj/adapter-lambda"
+import adapter from "@sveltejs/adapter-netlify";
 import preprocess from 'svelte-preprocess';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,7 +9,7 @@ const config = {
         postcss: true
     }),
     kit: {
-        adapter: serverless(),
+        adapter: adapter(),
         csrf: {
             checkOrigin: false
         }
